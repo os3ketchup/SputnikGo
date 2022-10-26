@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_enabled"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+<LinearLayout
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vitarich sirop"/>
+    <TextView
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20 уп."/>
+</LinearLayout>
+    <TextView
+        android:textColor="@color/white"
+        android:fontFamily="@font/quicksand_light"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="end"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="19 сент."/>
+</LinearLayout>
