@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/authenticationFragment">
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="uz.os3ketchup.sputnikgo.presentation.fragments.AuthenticationFragment"
+        android:label="fragment_authentification"
+        tools:layout="@layout/fragment_authentification" />
+    <fragment
+        android:id="@+id/userInfoFragment"
+        tools:layout="@layout/fragment_user_info"
+        android:name="uz.os3ketchup.sputnikgo.presentation.fragments.UserInfoFragment"
+        android:label="UserInfoFragment" />
+</navigation>
