@@ -9,23 +9,28 @@ import kotlin.random.Random
 object RemainderListRepositoryImpl : RemainderListRepository {
 
     private val remainderListLD = MutableLiveData<List<RemainderItem>>()
-    private val remainderList = sortedSetOf<RemainderItem>(
-        { v1, v2 -> v1.id.compareTo(v2.id) }
+    private val remainderList = sortedSetOf<RemainderItem>({ v1, v2 -> v1.id.compareTo(v2.id) }
     )
     private var autoIncrement = 0
 
     init {
-        // TODO("get Firebase realtime databases")
+        for (i in 0 until 10){
+            val remainderItem = RemainderItem("Name $i",i, Random.nextBoolean())
+            addRemainderItem(remainderItem)
+        }
     }
 
     override fun addRemainderItem(remainderItem: RemainderItem) {
         if (remainderItem.id == RemainderItem.UNDEFINED_ID) {
             remainderItem.id = autoIncrement++
         }
+        remainderList.add(remainderItem)
+        updateList()
     }
 
     override fun deleteRemainderItem(remainderItem: RemainderItem) {
         remainderList.remove(remainderItem)
+        updateList()
     }
 
     override fun editRemainderItem(remainderItem: RemainderItem) {
@@ -42,6 +47,10 @@ object RemainderListRepositoryImpl : RemainderListRepository {
 
     override fun getRemainderList(): LiveData<List<RemainderItem>> {
         return remainderListLD
+    }
+
+    private fun updateList(){
+        remainderListLD.value = remainderList.toList()
     }
 
 }

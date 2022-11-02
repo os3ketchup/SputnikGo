@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import uz.os3ketchup.sputnikgo.R
 import uz.os3ketchup.sputnikgo.databinding.FragmentAuthentificationBinding
-import uz.os3ketchup.sputnikgo.databinding.FragmentDetailsBinding
+
 
 
 class AuthenticationFragment : Fragment() {

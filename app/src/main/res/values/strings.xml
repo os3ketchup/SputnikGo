@@ -8,7 +8,11 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="error_input_count">error input count</string>
+    <string name="error_input_name">error input name</string>
+
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_remainder_item">RemainderItemActivity</string>
 </resources>

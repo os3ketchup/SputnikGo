@@ -80,7 +80,7 @@ class RemainderItemViewModel : ViewModel() {
             _errorInputName.value = true
             result = false
         }
-        if (count >= 0) {
+        if (count <= 0) {
             _errorInputCount.value = true
             result = false
         }
@@ -88,11 +88,11 @@ class RemainderItemViewModel : ViewModel() {
     }
 
     fun resetErrorInputName() {
-        _errorInputName.value = true
+        _errorInputName.value = false
     }
 
     fun resetErrorInputCount() {
-        _errorInputCount.value = true
+        _errorInputCount.value = false
     }
 
     private fun finishWork() {
